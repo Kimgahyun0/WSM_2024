@@ -1,0 +1,93 @@
+<!-- GIT -->
+<!-- 
+    add : ( staged 상태로 만들어서 ) 기록할 친구를 무대에 올려놓고
+    commit : add를 할때 (변화를 할때) 어떤 메시지로 올릴건지
+    push : 다른 github 저장소에 보관
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 10.96.121.86 : local host -->
+    <!-- 5500 : 기능 번호-->
+    <title>Hello world</title>
+</head>
+<body>
+    <h1>김가현</h1>
+    <h2>이여원</h2>
+    <h3>박혜린</h3>
+    <h4>배주연</h4>
+    <h5>정상미</h5>
+    <h6>연아윤</h6>
+    <h6>연아윤</h6>
+    <h5>정상미</h5>
+    <h4>배주연</h4>
+    <h3>박혜린</h3>
+    <h2>이여원</h2>
+    <h1>김가현</h1>
+
+    김&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 밥<br>가<br>현<br>
+    <!-- <br> : break -->
+    <!-- &nbsp : 띄어쓰기 -->
+    <ul>
+        <li>이</li>
+        <li>여</li>
+        <li>원</li>
+        <ul>
+            <li>투</li>
+            <li>쓰리</li>
+            <li>포</li>
+        </ul>
+    </ul>
+    <ol>
+        <li>박</li>
+        <li>도</li>
+        <ol>
+            <li>개</li>
+            <li>걸</li>
+            <li>윷</li>
+            <li>모</li>
+        </ol>
+        <li>연</li>
+    </ol>
+    
+    <a href="//naver.com">네이버</a>
+    <hr>
+    <h1>RIIZE</h1>
+    <ul>
+        <li>쇼타로</li>
+        <li>은석</li>
+        <li>성찬</li>
+        <li>원빈</li>
+        <li>소희</li>
+        <li>앤톤</li>
+    </ul>
+    <!-- img는 단일 태그 -->
+    <!-- alt : 이미지를 볼 수 없을 떄 해당 이미지를 대체할 텍스트를 명시함  -->
+    <img src="https://www.kukinews.com/data/kuk/image/2024/01/09/kuk202401090093.jpg" alt="Riizeeeeeeeeeeee" style="height: 500px;">
+    <hr>
+    <!-- action 넘어가는 위치 주소 -->
+    <form action="">
+        <!-- id : input창 요소에 지정할 수 있는 이름 -->
+        <!-- name : 입력한 값을 가져오는 변수 이름 -->
+        <!-- placeholder : input 박스 안에 텍스트 넣기 -->
+        <!-- 라디오 : 한번에 하나만 누를 수 있음 -->
+        <input type="text" placeholder="텍스트 입력"> 
+        <input type="password" name="비밀번호" id="">
+        <!-- new!!! : 텍스트만 클릭해도 선택가능 하도록-->
+        <!-- = <label for="">여고</label> 에 for은 id값을 넣어줘야 연결가능 --> 
+        <label for="radio_girl"><input type="radio" name="라디오" id="radio_gilr">여고</label>
+        <label for="radio_boy"><input type="radio" name="라디오" id="radio_boy">남고</label>
+        <label for="radio_girlandboy"><input type="radio" name="라디오" id="radio_gilrandboy">공학</label>
+
+        <label for="checkbox_chicken"><input type="checkbox" name="체크박스" id="checkbox_chicken">치킨</label>
+        <label for="checkbox_pizza"><input type="checkbox" name="체크박스" id="checkbox_pizza">피자</label>
+        <label for="checkbox_malatang"><input type="checkbox" name="체크박스" id="checkbox_malatang">마라탕</label>
+        
+        <!-- value에 작성 -->
+        <input type="submit" value="전송하기">
+    </form>
+    
+</body>
+</html>
