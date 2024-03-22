@@ -2,3 +2,58 @@
 h1{
     color: #333333;
 }
+/* 이게 더 구체적이라서 */
+ul li{
+    background-color: darksalmon;
+}
+li {
+    /* bacco */
+    background-color: cadetblue;
+}
+ul > ul > li{ /* ul의 자식, ul의 자식인 li에 적용 */
+    background-color: beige;
+}
+ul > li{    /* ul 바로 아로 자식 li에 적용*/
+    background-color: aqua;
+}
+
+.korea{
+    color: azure;
+}
+.japan{
+    color: brown;
+}
+.incheon{
+    color: darkslateblue;
+}
+#leader{
+    color: rgb(150, 94, 131);
+}
+
+li:first-child{     /* 첫쨰인데 li인 아이*/
+    font-weight: bold;
+}
+/* 막내인데 li를 적용 */
+
+li:last-child{       /*사실상 ul이 막내이지만 li에게 적용을 해야하므로 ul 속 li 막내에게 적용*/
+    font-style: italic;
+}
+
+li:nth-child(3){ /* 막내인데 셋째일때 (다른 속성인 경우) 두개 다 적용됨*/
+    color: hotpink;
+}
+/* nth-child는 변수 지정이 가능 */
+li:nth-child(2n){   /*짝수번쨰인데 li인 아이*/
+    background-color: lightblue;
+}
+
+h1, h3{     /* h1과 h3에 모두 적용*/
+    /* background-color: lightslategrey; */
+}       
+h1 + h2{    /*h1과 h3 자매여야함. h1 바로 아랫자매 h3에 적용 -> 바로 아래에 h2여야 적용 가능*/
+    /* background-color: yellow; */
+    background-color: bisque;
+}
+h1 ~ h3{    /* h1과 h3 자매여야함. h1 아랫자매 모든 h3에 */
+    background-color: mediumseagreen;
+}
