@@ -57,3 +57,25 @@ h1 + h2{    /*h1과 h3 자매여야함. h1 바로 아랫자매 h3에 적용 -> �
 h1 ~ h3{    /* h1과 h3 자매여야함. h1 아랫자매 모든 h3에 */
     background-color: mediumseagreen;
 }
+
+/* input 박스 색 지정하기 */
+[type="text"]{      /*type 속성의 값이 text인 요소에 적용 */
+    background-color: lavender;
+}
+
+/* 홀수번째 자매 중 li인 애들에 적용 */
+li:nth-child(2n-1){
+    font-size: 40px;
+}
+/* odd : 홀수 */
+li:nth-child(odd){  /*홀수 : odd, 2n-1*/
+    font-size: 8px;
+}
+li:nth-child(even){ /* 짝수 : evne, 2n*/
+    font-weight: 200;
+}
+
+/* Tip */
+body > ul:nth-child(21) > li:nth-child(4){
+    font-size: 100px;
+}
