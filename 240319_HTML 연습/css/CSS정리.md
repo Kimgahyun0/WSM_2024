@@ -31,9 +31,9 @@ TAG         : HTML
 
 [속성="값"]             : <TAG 속성="값"></TAG>
 
-선택자:first-child()    : 첫째 자식
+선택자:first-child    : 첫째 자식
 선택자:nth-childe(N)    : N번째 자식
-선택자:last-childe()    : 막내 자식
+선택자:last-childe    : 막내 자식
 
 선택자:hover            : 마우스 올리면 선택되는 선택자
 ```
