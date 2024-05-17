@@ -24,4 +24,7 @@
     /*z-index*/
     --z-index: 100;
 
+    /* nav */
+    --nav-height: 44px;
+
 }
