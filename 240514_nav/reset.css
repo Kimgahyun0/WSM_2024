@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 크기 기준이 content에서 border로 바뀜 */
+}
+
+a {
+    text-decoration: none;
+    /*링크 블루 언더라인 스타일 삭제*/
+}
+
+ul,
+ol {
+    list-style: none;
+    /*list item 글머리표 삭제*/
+}
+
+img {
+    max-width: 100%;
+    /* 자기 크기 유지 하다가 창이 더 작아지면 창 크기 만 해진다*/
+}
