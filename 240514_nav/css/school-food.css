@@ -1,0 +1,60 @@
+#school-food {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    /* 꼭 띄워주기 */
+    margin-top: calc(var(--nav-height) + 100px);
+}
+
+.button-container {
+    display: flex;
+    align-items: flex-end;
+    /* 글자를 한줄로 맞추기 위해 flex-end를 사용(글자끝 맞추기) */
+    column-gap: 20px;
+    font-size: var(--h1-font-size);
+    /* 조식과 메뉴 사이의 거리를 띄워줌 */
+    margin-bottom: 40px;
+
+}
+
+.prev-date,
+.next-date {
+    font-size: var(--h1-font-size);
+    background-color: transparent;
+    /*배경색을 투명으로 해줌*/
+    border: none;
+    cursor: pointer;
+}
+
+.menu-container {
+    width: 100%;
+    /*꽉채우기*/
+    padding: 0 100px;
+    /*상하가 0 좌우가 100*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 80px;
+    row-gap: 40px;
+}
+
+.school-food-menu {
+    max-width: 300px;
+    padding: 20px;
+    flex: 1 0 200px;
+    /*0은 아이템의 크기가 넘치면 줄여주는 것, */
+    border: 1px solid rgba(0, 0, 0, .25);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.school-food-menu>.title {
+    margin-bottom: 20px;
+    font-size: var(--h1-font-size);
+    text-align: center;
+}
+
+.scholl-food-menu>.menu {
+    font-size: var(--h2-font-size);
+    text-align: center;
+}
