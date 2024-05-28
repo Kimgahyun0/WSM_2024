@@ -35,7 +35,7 @@ body {
     background-color: var(--body-color);
 }
 
-body>hearder {
+body>header {
     /* absolute : 절대위치, 절대값 */
     position: absolute;
     top: 0;
