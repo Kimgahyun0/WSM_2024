@@ -7,25 +7,6 @@
 // //  닫기 버튼  -> 햄버거 메뉴 
 // // .nav-list 위로 올리기 
 
-// const toggleMenu = () => {
-//     // HTML요소 -> JS
-//     const navToggleDiv = document.getElementsByClassName("nav-toggle")[0];
-//     // .nav-toggle 가져오기
-//     const navListUI = document.getElementsByClassName("nav-list")[0];
-//     // .nav-list 가져오기
-//     const toggleI = navToggleDiv.getElementsByTagName("i")[0];
-//     // .nav-toggle > <i> 가져오기
-
-//     navToggleDiv.oncilck = () => {
-//         // class 에 show-menu를 붙이거나 / 배치
-//         navListUI.classList.toggle("show-menu");
-
-//         // toggle icon 바꾸기 : bi-list <-> bi-x-lg
-//         toggleI.classList.toggle("bi-list");
-//         toggleI.classList.toggle("bi-x-lg");
-//     }
-// }
-// toggleMenu();
 
 
 // 반응형 웹의 JavaScript에서 하는 일
