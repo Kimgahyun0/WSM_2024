@@ -61,7 +61,7 @@
 }
 
 /* tablet */
-@media screen and (max-width:600px) {
+@media screen and (max-width:976px) {
     #school-food {
         margin-top: calc(var(--nav-height) + 30px);
         /*띄어쓰기 중요*/
@@ -73,7 +73,9 @@
     }
 
     .school-food-menu {
+        /* 석식 박스 크기를 유지하기 위해서*/
         min-width: 100%;
+        /* max-width: 600px; */
     }
 
     .menu {
