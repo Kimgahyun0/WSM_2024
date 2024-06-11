@@ -62,7 +62,6 @@ KEY=${API_KEY}\
         .then((data) => console.log(setShcoolFoodMenu(data)))
         // 에러 있으면
         .catch((error) => console.error(error))
-
 }
 
 // 학교 급식 정보 표시하자
@@ -126,7 +125,6 @@ const setShcoolFoodMenu = (data) => {
             dinnerMenuUl.innerHTML = menuFood;
         }
     });
-
     //console.log("식사들 : ", data["mealServiceDietInfo"][1]["row"]);
     // let breakfastMenu = "<li>밥</li><li>국</li>";
     // data 적절히 처리 : 조식 음식, 중식음식들, 석식음식들
