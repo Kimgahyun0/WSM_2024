@@ -41,6 +41,7 @@ body>header {
     top: 0;
     right: 0;
     left: 0;
+    z-index: 10;
 }
 
 nav.container {
@@ -104,9 +105,10 @@ nav a {
         right: 0;
         left: 0;
         overflow: hidden;
-        z-index: -1;
         /*nav 뒤에 숨겨짐*/
-
+        z-index: -1;
+        /* 배경 흐리게 */
+        backdrop-filter: blur(4px);
     }
 
     .nav-item {
@@ -129,6 +131,7 @@ nav a {
         /* 햄버거 메뉴 보여라*/
         cursor: pointer;
         right: 0;
+        margin-top: 6px;
     }
 
     .show-menu {
