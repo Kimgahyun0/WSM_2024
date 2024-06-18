@@ -37,7 +37,7 @@ body {
 
 body>header {
     /* absolute : 절대위치, 절대값 */
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
