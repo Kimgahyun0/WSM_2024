@@ -40,7 +40,7 @@ getData();
 const searchData = (query) => {
     // console.log(query)
     // data 하나씩 꺼내어, name이랑 query랑 비교해서 있으면, 모아놓자
-    let searchData = allData.filter((oneData) => oneData["name"].includes(query));
+    let searchData = allData.filter((oneData) => oneData["name"].includes(query) || oneData["category"].includes(query));
     showData(searchData);
 
 }
