@@ -1,3 +1,6 @@
+// 전역변수 데이터
+let allData;
+
 const showData = (data) => {
     //  data 하니씩 뽑아서 <article> -> .product-container의 자식으로 넣자 <- html
     const productContainerSection = document.getElementsByClassName("product-container")[0]
@@ -14,8 +17,8 @@ const showData = (data) => {
     productContainerSection.innerHTML = articleString;
 }
 
-
 const setData = (data) => {
+    allData = data;
     showData(data);
     // showData(data);
     // // 무뚝뚝.webp 출력하자
@@ -33,3 +36,11 @@ const getData = (() => {
         .catch((error) => console.log(error));
 });
 getData();
+
+const searchData = (query) => {
+    // console.log(query)
+    // data 하나씩 꺼내어, name이랑 query랑 비교해서 있으면, 모아놓자
+    let searchData = allData.filter((oneData) => oneData["name"].includes(query));
+    showData(searchData);
+
+}
