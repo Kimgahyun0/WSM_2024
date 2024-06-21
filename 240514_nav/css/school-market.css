@@ -1,103 +1,100 @@
-#school-food {
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    /* 꼭 띄워주기 */
+#school-market {
     margin-top: calc(var(--nav-height) + 100px);
 }
 
-.button-container {
+#school-market {
     display: flex;
-    align-items: flex-end;
-    /* 글자를 한줄로 맞추기 위해 flex-end를 사용(글자끝 맞추기) */
-    column-gap: 20px;
-    font-size: var(--h1-font-size);
-    /* 조식과 메뉴 사이의 거리를 띄워줌 */
-    margin-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
 
 }
 
-.prev-date,
-.next-date {
-    font-size: var(--h1-font-size);
-    background-color: transparent;
-    /*배경색을 투명으로 해줌*/
+.search-container {
+    background-color: #dcdcdc;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 28px;
+    min-width: 300px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#search-bar {
+    font-size: var(--h2-font-size);
+    /*입력창 배경 사라져*/
+    background: none;
+    /*입력창 외곽선 사라져*/
     border: none;
-    cursor: pointer;
+    /* border-bottom 밑줄*/
+    /* input창 늘리기 */
+    /* 나를감싼 container에 여유공간 생기면, 나를 늘려 */
+    flex-grow: 1;
 }
 
-.menu-container {
-    width: 100%;
-    /*꽉채우기*/
-    padding: 0 100px;
-    /*상하가 0 좌우가 100*/
+#search-bar:focus {
+    /* 입력창 focus시, 외곽선 사라져 */
+    outline: none;
+}
+
+.search-container>i {
+    font-size: var(--h2-font-size);
+    /* 여백맞추기 */
+    margin-top: 4px;
+}
+
+.product-container {
+    margin: 0 100px;
+    margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 80px;
-    row-gap: 40px;
+    gap: 40px;
+    justify-content: space-between;
 }
 
-.school-food-menu {
-    text-align: center;
-    max-width: 300px;
-    padding: 20px;
-    flex: 1 0 200px;
-    /*0은 아이템의 크기가 넘치면 줄여주는 것, */
-    border: 1px solid rgba(0, 0, 0, .25);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ededed;
+    padding: 30px;
+    border-radius: 40px;
+    /* 내 자손 중 position: absolute;인 아이의 기준 */
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.school-food-menu>.title {
-    margin-bottom: 20px;
-    font-size: var(--h1-font-size);
-    text-align: center;
+.product-image {
+    height: 200px;
+    /* 이미지 너비(앞)/이미지 높이(뒤) 비율*/
+    aspect-ratio: 1/1;
+    /*cover : 공간에 맞게 확대, 잘림, contain : 공간에 맞게 축소, 여백생김*/
+    object-fit: contain;
+    border-radius: 10px;
+    background-color: white;
 }
 
-.scholl-food-menu>.menu {
+.product-name {
+    background-color: #dcdcdc;
+    padding: 4px 30px;
     font-size: var(--h2-font-size);
-    text-align: center;
+    border-radius: 19px;
+    position: absolute;
+    bottom: -19px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* tablet */
 @media screen and (max-width:976px) {
-    #school-food {
+    #school-market {
         margin-top: calc(var(--nav-height) + 30px);
-        /*띄어쓰기 중요*/
     }
+}
 
-    .menu-container {
-        flex-direction: column;
-        align-items: center;
+/* mobile */
+@media screen and (max-width:800px) {
+    .product-container {
+        justify-content: center;
     }
-
-    .school-food-menu {
-        /* 석식 박스 크기를 유지하기 위해서*/
-        min-width: 100%;
-        /* max-width: 600px; */
-    }
-
-    .menu {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        max-width: 300px;
-        margin: 0 auto;
-        /* 고정 너비(최대 너비) 설정 후 작동, menu 요소의 최대 너비와 동일하거나 더 작아야 합니다. 
-        중앙 정렬을 했을 때에는 효과가 보이지 않을 수 있다.*/
-    }
-
-    .menu-food:nth-child(odd) {
-        text-align: left;
-    }
-
-    .menu-food:nth-child(even) {
-        text-align: right;
-    }
-
-    .menu-food {
-        width: 50%;
-    }
-
 }
