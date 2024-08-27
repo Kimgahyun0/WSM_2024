@@ -38,7 +38,7 @@ const toggleMenu = () => {
         navListUl.classList.toggle("show-menu");
 
         // toggle icon 바꾸자 : bi-list <-> bi-x-lg
-        toggleI.classList.toggle("bi-lsit"); // id로 잘 안가져옴, 동시호출시 클래스로 통일
+        toggleI.classList.toggle("bi-list"); // id로 잘 안가져옴, 동시호출시 클래스로 통일
         // toggle.classList.toggle.add("bi-list");
         // toggleI.classList.remove("bi-x-lg");
         // toggleI.classList.remove("bi-x-lg");

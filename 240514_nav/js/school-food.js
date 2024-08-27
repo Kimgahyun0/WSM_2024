@@ -66,7 +66,7 @@ KEY=${API_KEY}\
 
 // 학교 급식 정보 표시하자
 const setShcoolFoodMenu = (data) => {
-    // console.log(data);
+    console.log(data);
     // HTML -> js 변수
     // console.log(data);
     const breakfastMenuUl = document.getElementsByClassName("menu breakfast")[0];
@@ -78,11 +78,11 @@ const setShcoolFoodMenu = (data) => {
     dinnerMenuUl.innerHTML = "<li>급식정보가 없습니다.<li/>";
 
     // 확인용
-    // console.log(breakfastMenuUl, lunchMenuUl, dinnerMenuUl);
+    console.log(breakfastMenuUl, lunchMenuUl, dinnerMenuUl);
     // 식사들 가져오자
     // data 적절히 처리 : 조식음식들, 중식음식들, 석식음식들
     // console.log(data);
-    // console.log(data["mealServiceDietInfo"]);
+    console.log(data["mealServiceDietInfo"]);
     // console.log(data["mealServiceDietInfo"][1]["row"]);
     // 급식 정보가 없을 때, data["mealServiceDietInfo"]가 undefined로 나온다 그럼 나가자
     if (data["mealServiceDietInfo"] === undefined) return;
@@ -93,7 +93,7 @@ const setShcoolFoodMenu = (data) => {
     menuData.forEach((menuRow) => {
         // 음식 하나씩 <li>태그로 감싼 덩어리
         let menuFood = "";
-        // console.log(menuRow);
+        console.log(menuRow);
 
         // 음식들 가져오자
         let menu = menuRow["DDISH_NM"];
@@ -125,25 +125,25 @@ const setShcoolFoodMenu = (data) => {
             dinnerMenuUl.innerHTML = menuFood;
         }
     });
-    //console.log("식사들 : ", data["mealServiceDietInfo"][1]["row"]);
+    console.log("식사들 : ", data["mealServiceDietInfo"][1]["row"]);
     // let breakfastMenu = "<li>밥</li><li>국</li>";
     // data 적절히 처리 : 조식 음식, 중식음식들, 석식음식들
 };
 
-// let 변우석 = {
-//     'name': '변우석',
-//     'age': 34,
-//     'height': 189,
-//     'filmography': ['선재업고튀어', '20세기 소녀'],
-// }
-// console.log(변우석.age);
-// console.log(변우석["age"]);
-// // 변수명으로 안되는 게 오면 안될 수 있음
-// console.log(변우석.filmography);
-// console.log(변우석["filmography"]);
-// // error
-// console.log(변우석.filmography[0]);
-// console.log(변우석["filmography"][0]);
+let 변우석 = {
+    'name': '변우석',
+    'age': 34,
+    'height': 189,
+    'filmography': ['선재업고튀어', '20세기 소녀'],
+}
+console.log(변우석.age);
+console.log(변우석["age"]);
+// 변수명으로 안되는 게 오면 안될 수 있음
+console.log(변우석.filmography);
+console.log(변우석["filmography"]);
+// error
+console.log(변우석.filmography[0]);
+console.log(변우석["filmography"][0]);
 
 // 날짜 변경하고 화면에 표시하는 함수 작성
 const changeDate = (diff) => { // -1,1

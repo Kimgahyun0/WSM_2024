@@ -12,7 +12,7 @@ const showData = (data) => {
                 <div class="product-name">${element.name}</div>
             </article>\n`;
     });
-    // console.log(articleString);
+    console.log(articleString);
 
     productContainerSection.innerHTML = articleString;
 }
@@ -23,7 +23,8 @@ const setData = (data) => {
     // showData(data);
     // // 무뚝뚝.webp 출력하자
     // console.log(data[3]["image"]);
-    // console.log(data[3].image);
+    console.log(data[3]["image"])
+    console.log(data[3].image);
     // // 허니버터칩 출력하자
     // console.log(data[9]["name"]);
     // console.log(data[9].name);
@@ -42,5 +43,6 @@ const searchData = (query) => {
     // data 하나씩 꺼내어, name이랑 query랑 비교해서 있으면, 모아놓자
     let searchData = allData.filter((oneData) => oneData["name"].includes(query) || oneData["category"].includes(query));
     showData(searchData);
+    allData.filter((oneData))
 
 }

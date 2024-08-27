@@ -1,81 +1,107 @@
 /* 따로 폴더를 만들지 않아도 link를 먼저쓰고 follow link 클릭해서 파일 생성 */
-h1{
+h1 {
     color: #333333;
 }
+
 /* 이게 더 구체적이라서 */
-ul li{
+ul li {
     background-color: darksalmon;
 }
+
 li {
     /* bacco */
     background-color: cadetblue;
 }
-ul > ul > li{ /* ul의 자식, ul의 자식인 li에 적용 */
+
+ul>ul>li {
+    /* ul의 자식, ul의 자식인 li에 적용 */
     background-color: beige;
 }
-ul > li{    /* ul 바로 아로 자식 li에 적용*/
+
+ul>li {
+    /* ul 바로 아로 자식 li에 적용*/
     background-color: aqua;
 }
 
-.korea{
+.korea {
     color: azure;
 }
-.japan{
+
+.japan {
     color: brown;
 }
-.incheon{
+
+.incheon {
     color: darkslateblue;
 }
-#leader{
+
+#leader {
     color: rgb(150, 94, 131);
 }
 
-li:first-child{     /* 첫쨰인데 li인 아이*/
+li:first-child {
+    /* 첫쨰인데 li인 아이*/
     font-weight: bold;
 }
+
 /* 막내인데 li를 적용 */
 
-li:last-child{       /*사실상 ul이 막내이지만 li에게 적용을 해야하므로 ul 속 li 막내에게 적용*/
+li:last-child {
+    /*사실상 ul이 막내이지만 li에게 적용을 해야하므로 ul 속 li 막내에게 적용*/
     font-style: italic;
 }
 
-li:nth-child(3){ /* 막내인데 셋째일때 (다른 속성인 경우) 두개 다 적용됨*/
+li:nth-child(3) {
+    /* 막내인데 셋째일때 (다른 속성인 경우) 두개 다 적용됨*/
     color: hotpink;
 }
+
 /* nth-child는 변수 지정이 가능 */
-li:nth-child(2n){   /*짝수번쨰인데 li인 아이*/
+li:nth-child(2n) {
+    /*짝수번쨰인데 li인 아이*/
     background-color: lightblue;
 }
 
-h1, h3{     /* h1과 h3에 모두 적용*/
+h1,
+h3 {
+    /* h1과 h3에 모두 적용*/
     /* background-color: lightslategrey; */
-}       
-h1 + h2{    /*h1과 h3 자매여야함. h1 바로 아랫자매 h3에 적용 -> 바로 아래에 h2여야 적용 가능*/
+}
+
+h1+h2 {
+    /*h1과 h3 자매여야함. h1 바로 아랫자매 h3에 적용 -> 바로 아래에 h2여야 적용 가능*/
     /* background-color: yellow; */
     background-color: bisque;
 }
-h1 ~ h3{    /* h1과 h3 자매여야함. h1 아랫자매 모든 h3에 */
+
+h1~h3 {
+    /* h1과 h3 자매여야함. h1 아랫자매 모든 h3에 */
     background-color: mediumseagreen;
 }
 
 /* input 박스 색 지정하기 */
-[type="text"]{      /*type 속성의 값이 text인 요소에 적용 */
+[type="text"] {
+    /*type 속성의 값이 text인 요소에 적용 */
     background-color: lavender;
 }
 
 /* 홀수번째 자매 중 li인 애들에 적용 */
-li:nth-child(2n-1){
+li:nth-child(2n-1) {
     font-size: 40px;
 }
+
 /* odd : 홀수 */
-li:nth-child(odd){  /*홀수 : odd, 2n-1*/
+li:nth-child(odd) {
+    /*홀수 : odd, 2n-1*/
     font-size: 8px;
 }
-li:nth-child(even){ /* 짝수 : evne, 2n*/
+
+li:nth-child(even) {
+    /* 짝수 : evne, 2n*/
     font-weight: 200;
 }
 
 /* Tip */
-body > ul:nth-child(21) > li:nth-child(4){
-    font-size: 100px;
+body>ul:nth-child(21)>li:nth-child(4) {
+    font-style: italic;
 }
