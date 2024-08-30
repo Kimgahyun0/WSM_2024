@@ -1,0 +1,75 @@
+.container {
+    width: 600px;
+    height: 800px;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20% 20%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10%;
+}
+
+.item {
+    display: grid;
+    place-items: center;
+    border: 1px solid palevioletred;
+}
+
+.day {
+    background-color: hotpink;
+    color: white;
+}
+
+.item:first-child {
+    background-color: hotpink;
+    color: white;
+}
+
+.classtime {
+    color: hotpink;
+}
+
+#java_twoclass {
+    /* border: 1px solid white; */
+    grid-row: 3 / span 2;
+    grid-column-start: 4;
+}
+
+#ds_twoclass {
+    /* border: 1px solid white; */
+    grid-row: 4 / span 2;
+    grid-column-start: 3;
+}
+
+#wsm_twoclass {
+    /* border: 1px solid white; */
+    grid-row: 7 / span 2;
+    grid-column-start: 3;
+}
+
+#club_twoclass {
+    /* border: 1px solid white; */
+    grid-row: 7 / span 2;
+    grid-column-start: 4;
+}
+
+#coding_twoclass {
+    /* border: 1px solid white; */
+    grid-row: 4 / span 2;
+    grid-column-start: 5;
+}
+
+#py_twoclass {
+    /* border: 1px solid white; */
+    grid-row: 6 / span 2;
+    grid-column-start: 5;
+}
+
+#js_twoclass {
+    /* border: 1px solid white; */
+    grid-row: 6 / span 2;
+    grid-column-start: 6;
+}
+
+#wsm_twoclass_F {
+    /* border: 1px solid white; */
+    grid-row: 4 / span 2;
+    grid-column-start: 6;
+}
