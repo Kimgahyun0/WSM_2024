@@ -1,0 +1,57 @@
+* {
+    /* 꽉 채워지게 됨 */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+.container * {
+    /* 겹치니까 두꺼워짐 */
+    border: 1px solid gray;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    /*100vh : 부모와 상관 없이 가득 채움*/
+    display: grid;
+    grid-template-columns: 100px 1fr 50px;
+    grid-template-rows: 44px 1fr 200px;
+    /* 이름 붙이기 */
+    grid-template-areas:
+        "header     header      header"
+        "side-left  main        side-right"
+        "footer     footer      footer";
+
+}
+
+header.header {
+    grid-area: header;
+}
+
+.side1 {
+    grid-area: side-left;
+}
+
+.side2 {
+    grid-area: side-right;
+}
+
+footer {
+    grid-area: footer;
+}
+
+nav {
+    height: 44px;
+}
+
+/* 보통 안에 뭐가 있을지 모르니까 자손으로 함 */
+figure img {
+    width: 200px;
+    height: 200px;
+    /* 100px이랑 똑같 */
+    border-radius: 50%;
+}
