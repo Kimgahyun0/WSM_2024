@@ -39,10 +39,19 @@
     border-bottom: 1.4px solid #555;
 }
 
-.other-date {
-    color: #ddd;
+.item:nth-child(7n+1) {
+    color: crimson;
 }
 
-.item:not(.other-date):hover {
+.item:nth-child(7n+7) {
+    color: cornflowerblue;
+}
+
+.other-month {
+    color: #ddd !important;
+
+}
+
+.item:not(.other-month):hover {
     cursor: pointer;
 }
