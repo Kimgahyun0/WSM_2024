@@ -43,11 +43,14 @@ const nextMonthButton = document.querySelector("#next-month");
 nextMonthButton.onclick = () => changeMonth(1);
 // console.log('다음 달')
 
-// 일 구하자
+// 달력 표시하자(요일, 날짜)
 const setCalendar = (date) => {
     // ctrl + shift + K : 한 줄 지우기
     const year = date.getFullYear();
     const month = date.getMonth();
+
+    // 이전 달 마지막 날짜 구하자 : 이번 달 날짜 - 1
+    const prevMonthLastDate = new Date(year, month, 0)
 
     // 첫날에 요일 구하자 : 이전달 뒷 날짜 쓰기 위하여
     const firstDay = new Date(year, month, 1).getDay(); // 0 : 일,  6 : 토
@@ -81,6 +84,18 @@ const setCalendar = (date) => {
 
     calendarContainerDiv.innerHTML = weekNameString;
     // 이전 달 뒷날짜 구하자
+    // ? ~ 이전 달 마지막 날짜 ? : 이전 달 마지막 날짜 : 이번 달 첫날의 요일 + 1
+    for (let date = (prevMonthLastDate.getDate() - firstDay + 1); date <= prevMonthLastDate.getDate(); date++) {
+        //                              <div></div>가 생겼다
+        let currentMonthDateDiv = document.createElement("div");
+        //                              <div class="item other-month"></div>
+        currentMonthDateDiv.className = "item other-month";
+        //                              <div class="item other-month">1</div>
+        currentMonthDateDiv.textContent = date;
+        //                              <div id="calendar-container"><div class="item">1</div></div>
+        calendarContainerDiv.appendChild(currentMonthDateDiv);
+    }
+
     // 0 ~ 이번달 1일의 요일-1까지 이전달 마지막 날짜 - 이번달 1일의 요일 + 1(시작날짜)부터 +1해서 쓰자
 
     // 문자열로 넣느냐 객체로 넣는지의 차이
@@ -102,8 +117,17 @@ const setCalendar = (date) => {
         calendarContainerDiv.appendChild(currentMonthDateDiv);
     }
     // 다음 날 앞날짜 구하자
-    // 이번달 마지막 날의 요일+1 ~ 6까지 1부터 차례대로 날짜 쓰자
-
+    // 1 ~ ? ? : 6 ~ 이번 달 마지막 날짜의 요일
+    for (let date = 1; date <= (6 - lastDay); date++) {
+        //                              <div></div>가 생겼다
+        let currentMonthDateDiv = document.createElement("div");
+        //                              <div class="item other-month"></div>
+        currentMonthDateDiv.className = "item other-month";
+        //                              <div class="item other-month">1</div>
+        currentMonthDateDiv.textContent = date;
+        //                              <div id="calendar-container"><div class="item">1</div></div>
+        calendarContainerDiv.appendChild(currentMonthDateDiv);
+    }
     // 1 ~ 30(이번달 날짜들)
     // 1 ~ 5(다음달 날짜들)
 }
