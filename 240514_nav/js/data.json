@@ -9,7 +9,7 @@
         "name": "더블치즈후레쉬팡",
         "price": 1200,
         "category": "빵류",
-        "image": "더블치즈후레쉬팡.png"
+        "image": "더블치즈후레쉬팡.jpg"
     },
     {
         "name": "몽쉘",
@@ -39,7 +39,7 @@
         "name": "소금빵",
         "price": 1100,
         "category": "빵류",
-        "image": "소금빵.jpg"
+        "image": "소금빵.png"
     },
     {
         "name": "요맘때",
