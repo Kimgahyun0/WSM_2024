@@ -52,6 +52,6 @@
 
 }
 
-.item:not(.other-month):hover {
+.item:not(.other-date) {
     cursor: pointer;
 }

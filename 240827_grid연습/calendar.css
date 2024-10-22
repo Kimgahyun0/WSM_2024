@@ -15,14 +15,14 @@
     border: none;
     padding: 10px;
     background-color: transparent;
-    font-size: 2rem;
+    font-size: 1.3rem;
     cursor: pointer;
 }
 
 #calendar-container {
-    height: 400px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    height: 400px;
     /* 밑줄 item들을 모두 감싸고 있음 */
     border-bottom: 1.4px solid #555;
 }
@@ -52,6 +52,6 @@
 
 }
 
-.item:not(.other-month):hover {
+/* .item:not(.other-month):hover {
     cursor: pointer;
-}
+} */
