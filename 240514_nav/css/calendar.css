@@ -52,6 +52,6 @@
 
 }
 
-.item:not(.other-date) {
+.item:not(.other-date):hover {
     cursor: pointer;
 }
