@@ -1,6 +1,6 @@
-// 초기 설정에 필요한 것
+//초기 설정에 필요한 모든 데이터: 세탁기, 시간, 호실
 let allData;
-//         
+//미리 정해진 요일별 예약 데이터
 let weeklyReservation;
 
 // selection-item 요소들 가져오자
