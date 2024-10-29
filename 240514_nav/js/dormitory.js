@@ -7,6 +7,7 @@ const selectionWashingmachineTimeDiv = document.getElementById("selection-washin
 const selectionRoomNameDiv = document.querySelector("#selection-room-name");
 const boardDiv = document.querySelector("#board");
 
+
 // console.log(calendarDiv);
 // console.log(selectionWashingmachineTimeDiv);
 // console.log(selectionRoomNameDiv);
@@ -22,8 +23,11 @@ const setPage = (page) => {
         selectionItemDiv.classList.remove("select-menu");
     }
 
-    // selection 치하자
-    selectionItemDivs[page - 1].classList.add("select-menu");
+    // 세탁기 예약 현황표는 selection이 없음
+    if (page != 4) {
+        // selection 칠하자
+        selectionItemDivs[page - 1].classList.add("select-menu");
+    }
 
     // clear pageDiv
     pageDivs.forEach(pageDiv => {
@@ -34,5 +38,4 @@ const setPage = (page) => {
     pageDivs[page - 1].style.display = "block";
 }
 setPage(1)
-
 
