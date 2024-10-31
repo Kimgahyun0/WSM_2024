@@ -27,7 +27,7 @@ const changeMonth = (delta) => {
 const prevMonthButton = document.getElementById('prev-month');
 // ()는 익명함수
 // .addEventLister("click", console.log('이전 달')) 하면 안돼ㅐㅐㅐㅐㅐconsole.log()함수 실행한 결과를 클릭해쓸 때 실행하는 거야. 즉 아무일도 안해
-// 뒤에 있는 파라미터의 함수 이름을 실행 함수 ㅣㅇ름에 괄호를 붙여서 실행을 함
+// 뒤에 있는 파라미터의 함수 이름을 실행 함수 이름에 괄호를 붙여서 실행을 함
 // 이렇게 하면 return 값이 없기 때문에 undefined
 // prevMonthButton.addEventListener("click", changeMonth(-1));
 
@@ -106,15 +106,20 @@ const setCalendar = (date) => {
     // calendarContainerDiv.innerHTML += dateString;
     // div 요소 만들자, class에 item 넣자, text에 날짜 넣자, calendarContainerDiv에 자식으로 붙이자
     for (let date = 1; date <= lastDate.getDate(); date++) {
-        //                              <div></div>가 생겼다
-        let nextMonthDateDiv = document.createElement("div");
-        //                              <div class="item"></div>
-        nextMonthDateDiv.className = "item";
-        //                              <div class="item">1</div>
-        nextMonthDateDiv.textContent = date;
-        //                              <div id="calendar-container"><div class="item">1</div></div>
-        calendarContainerDiv.appendChild(nextMonthDateDiv);
+        //<div></div>가 생겼다
+        let currentMonthDateDiv = document.createElement("div");
+        //<div class="item"></div>
+        currentMonthDateDiv.className = "item";
+        //<div class="item" onclick="clickDate"></div>
+        currentMonthDateDiv.onclick = (event) => clickDate(event); // 수정된 부분
+        //<div class="item" data-date="년-월-일"></div>
+        currentMonthDateDiv.dataset.date = `${year}-${month + 1}-${date}`;
+        //<div class="item">1</div>
+        currentMonthDateDiv.textContent = date;
+        //<div id="calendar-container"><div class="item">1</div></div>
+        calendarContainerDiv.appendChild(currentMonthDateDiv);
     }
+
     // 다음 날 앞날짜 구하자
     // 1 ~ ? ? : 6 ~ 이번 달 마지막 날짜의 요일
     for (let date = 1; date <= (6 - lastDay); date++) {
