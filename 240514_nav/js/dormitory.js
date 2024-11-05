@@ -140,15 +140,29 @@ const initWashingmachineTime = () => {
     let weekday = newReservation.date.getDay();
 
     // 그 요일의 미리 예약된 세탁기와 시간 파악
-
-
     // 예약된게 있으면 select 목록에서 빼자
+    weeklyReservations.forEach((weeklyReservation) => {
+        if (weeklyReservation.weekday === weekday) {
+            const { washingmachine, time } = weeklyReservation;
+            // const washingmachine = weeklyReservation.washingmachine;
+            // const time = weeklyReservation.time;
+
+            // 1 -> "1"
+            const index = allWashingmachineTime[washingmachine].indexOf(String(time));
+            // 예약된 시간 찾았다면
+            if (index > -1) {
+                // 그 시간 빼자
+                allWashingmachineTime[washingmachine].splice(index, 1);
+            }
+        }
+    });
 
     // 그 요일의 밀 예약된 세탁기와 시간이 다 차면, 그 세탁기 select 목록에서 빼자
 
     // 사용자가 예약한 내용도 위의 것을 다 파악해서 빼자
 
     // select 를 : 세탁기 번호, 시간들 만들자
+    washingmachines = Object.keys(allWashingmachineTime);
     washingmachines.forEach((washingmachine) => {
         // <option value="1">1번 세탁기</option>
         // option 태그 만들자
