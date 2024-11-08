@@ -15,10 +15,10 @@ const selectionItemDivs = document.getElementsByClassName("selection-item");
 const calendarDiv = document.getElementById("calendar");
 const selectionWashingmachineTimeDiv = document.getElementById("selection-washingmachine-time");
 const washingmachineTimeDiv = document.getElementById("washingmachine");
+const washingmachineSelect = document.getElementById("washingmachine");
 const timeSelect = document.getElementById("time");
 const selectionRoomNameDiv = document.querySelector("#selection-room-name");
 const boardDiv = document.querySelector("#board");
-
 
 // console.log(calendarDiv);
 // console.log(selectionWashingmachineTimeDiv);
@@ -186,7 +186,7 @@ const initWashingmachineTime = () => {
             // "2" -> allData.time["2"](8시 10분 ~ 9시 20분). time -> allData.time[time]
             newOption.textContent = time;
 
-            timeSelect.appendChile(newOption);
+            timeSelect.appendChild(newOption);
         });
     }
     initTime();
